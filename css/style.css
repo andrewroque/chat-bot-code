@@ -1,0 +1,71 @@
+/* @font-face {
+  font-family: 'artifactual-boxed';
+  src: url('/fonts/artifactual-boxed/artifactual-boxed-Regular.eot');
+  src: url('/fonts/artifactual-boxed/artifactual-boxed-Regular.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/artifactual-boxed/artifactual-boxed-Regular.woff2') format('woff2'),
+      url('/fonts/artifactual-boxed/artifactual-boxed-Regular.woff') format('woff'),
+      url('/fonts/artifactual-boxed/artifactual-boxed-Regular.ttf') format('truetype'),
+      url('/fonts/artifactual-boxed/artifactual-boxed-Regular.svg#artifactual-boxed-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'artifactual';
+  src: url('/fonts/artifactual-regular/artifactual-regular-Regular.eot');
+  src: url('/fonts/artifactual-regular/artifactual-regular-Regular.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/artifactual-regular/artifactual-regular-Regular.woff2') format('woff2'),
+      url('/fonts/artifactual-regular/artifactual-regular-Regular.woff') format('woff'),
+      url('/fonts/artifactual-regular/artifactual-regular-Regular.ttf') format('truetype'),
+      url('/fonts/artifactual-regular/artifactual-regular-Regular.svg#artifactual-regular-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+
+
+* {
+  background-color: rgb(191, 255, 0);
+  font-family: Helvetica; 
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-repeat: repeat;   
+}
+
+/* * {
+  background-color: rgb(191, 255, 0);
+  font-family: artifactual, Helvetica;    
+} */
+
+html, body { 
+  padding: 0; 
+  margin: 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* background-image: url('/images/mask.jpg'); */
+}
+
+h2 {
+  font-size: 75px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width:100vw;
+  height: 97vh;
+  /* border: 5px solid red; */
+  /* display: none; */
+  align-items: center;
+  justify-content: center; 
+
+}
+#clock {
+  font-size: 130px;
+  color: red;
+  background-color: none;
+}
+
