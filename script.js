@@ -18,6 +18,8 @@ voicemails.push("How are you? Happy Thanksgiving. I don't know what you're doing
 voicemails.push("Hi, babe. Sorry I missed your call. Bye");
 voicemails.push("Babe. Happy birthday. I know you're busy. Okay, take care. I love you. Bye.");
 voicemails.push("Hi, babe. Call me when you can.");
+voicemails.push("Babe, did you call me, babe? Call me back.");
+voicemails.push("Hi, babe. You called me. Call me back. Thank you.");
 
 
 const random = voicemails[Math.floor(Math.random() * voicemails.length)];
