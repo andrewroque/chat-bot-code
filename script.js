@@ -3,8 +3,9 @@ console.log('Hello');
 const button = document.querySelector("button");
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
+voices = window.speechSynthesis.getVoices()
 
-const voicemails = [];
+let voicemails = [];
 voicemails.push("Hi babe. How are you? I just missed you. Hope you could call me tonight. Thank you. I love you, babe.");
 voicemails.push("Hi babe. Just wanna say how you two guys are doing. Okay. Love you");
 voicemails.push("Babe, I meant to, um, greet you. Happy anniversary. I forgot all about it. I've been wanting to call you. Okay. Hope you had a really good anniversary. It's been like three years. Wow. Okay. See you. I'm happy you could stay a little longer with me this time. All right. Bye.");
@@ -22,7 +23,11 @@ voicemails.push("Babe, did you call me, babe? Call me back.");
 voicemails.push("Hi, babe. You called me. Call me back. Thank you.");
 
 
-const random = voicemails[Math.floor(Math.random() * voicemails.length)];
+
+
+button.addEventListener("click", () =>{
+  recognition.start();
+  let random = voicemails[Math.floor(Math.random() * voicemails.length)];
 // const randomOutput = voicemails[random];
 
 // console.log(random);
@@ -47,6 +52,7 @@ function computerSpeech(words) {
   speech.pitch = 2;
   speech.volume = 1;
   speech.rate = 1;
+  speech.voice = voices[1];
 
   // speech.text = words;
   determineWords(speech, words);
@@ -59,13 +65,11 @@ function determineWords(speech,words) {
     speech.text = "I am fine";
   }
 
-  if(words.includes("hi")) {
+  if(words.includes("hi Mom sorry I can't talk")) {
     speech.text = random;
     console.log(speech.text);
   }
 }
-
-button.addEventListener("click", () =>{
-  recognition.start();
-  const random = voicemails[Math.floor(Math.random() * voicemails.length)];
 });
+
+//find out how to lowercase
